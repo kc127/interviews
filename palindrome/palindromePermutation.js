@@ -13,3 +13,20 @@ intuition:
   - else return false
 */
 
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+ var canPermutePalindrome = function(s) {
+  let charFreq = {};
+  let count = 0;
+  for (let ch of s) {
+      charFreq[ch] = (charFreq[ch] || 0) + 1;
+  }
+  for (let char in charFreq) {
+      if (charFreq[char] % 2 !== 0) {
+          count++;
+      }
+  }
+  return count <= 1 ? true : false;
+};
