@@ -13,7 +13,7 @@
  *      set first as prev
  *  return res if res.len === s.len
  *
- * /
+ */
  var reorganizeString = function(s) {
   let res = [];
   let charFreq = createCharFreq(s);
